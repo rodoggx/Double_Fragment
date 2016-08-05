@@ -23,4 +23,10 @@
         android:layout_height="wrap_content"
         android:text="Show Image 2" />
 
+    <ListView
+        android:id="@+id/f_left_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+
 </LinearLayout>

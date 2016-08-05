@@ -38,10 +38,20 @@ public class RightFragment extends Fragment {
     }
 
     public void loadImage(String name) {
-        String url = name.contains("Edwin")
-                ? "http://www.tailgaterzone.com/assets/images/ven/bsi/nfl/98720.jpg"
+        //String url = name.contains("Edwin")
+          //      ? "http://www.tailgaterzone.com/assets/images/ven/bsi/nfl/98720.jpg"
                 //? "http://ichef.bbci.co.uk/news/660/cpsprodpb/025B/production/_85730600_monkey2.jpg"
-                : "http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/H-P/pig-full-body.jpg.adapt.945.1.jpg";
+            //    : "http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/H-P/pig-full-body.jpg.adapt.945.1.jpg";
+
+        String url;
+
+        if (name.contains("0")) {
+            url = "http://ichef.bbci.co.uk/news/660/cpsprodpb/025B/production/_85730600_monkey2.jpg";
+        } else if (name.contains("1")) {
+            url = "http://www.tailgaterzone.com/assets/images/ven/bsi/nfl/98720.jpg";
+        } else {
+            url = "http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/H-P/pig-full-body.jpg.adapt.945.1.jpg";
+        }
 
         Picasso.with(getContext()).load(url).into(mImageView);
     }
